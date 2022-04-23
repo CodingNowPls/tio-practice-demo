@@ -1,0 +1,46 @@
+##############spring配置信息#############
+spring:
+  datasource:
+    druid:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      #&nullCatalogMeansCurrent=true 自动建表
+      url: jdbc:mysql://127.0.0.1:3306/carcms?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+      username: root
+      password: root2018
+      initialSize: 6
+      minIdle: 6
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      use-global-data-source-stat: true
+#######################mybatis plus#################################
+#mybatis-plus配置控制台打印完整带参数SQL语句
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+######################业务##################
+tio:
+  #配置名称
+  configName: tio-demo
+  # 服务器地址
+  server: 0.0.0.0
+  #监听端口
+  port: 6789
+  #心跳超时时间
+  timeout: 5000
+
+#停车场信息
+parking:
+  parkId: 123444
+  parkKey: aaaa-bbbb-cccc-dddd-ddddddddd
+  ##### 日志是否打印
+  logPrint: true
