@@ -2,7 +2,7 @@ package com.tio.common.socket.bean;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.tio.common.socket.base.ReMessage;
+import com.tio.common.socket.base.RequestMessage;
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
@@ -14,7 +14,7 @@ import javax.validation.constraints.NotEmpty;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class HeartBeatMessage implements ReMessage {
+public class HeartBeatMessage implements RequestMessage {
     /**
      * 接口名称
      */

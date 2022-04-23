@@ -1,7 +1,7 @@
 package cn.tio.demo.socket;
 
 
-import com.tio.common.socket.base.RequestMessage;
+import com.tio.common.socket.base.Message;
 import com.tio.common.validator.ValidatorUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +16,7 @@ import java.util.Set;
  *
  * @author
  */
-public interface RequestMessageHandler<T extends RequestMessage> {
+public interface RequestMessageHandler<T extends Message> {
 
     Logger log = LoggerFactory.getLogger(RequestMessageHandler.class);
 
